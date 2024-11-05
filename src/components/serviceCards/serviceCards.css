@@ -1,0 +1,19 @@
+.CARD-DIV{
+    background-color: white;
+    max-width: 300px;
+    height: 300px;
+    transition: .1s all ease-in-out;
+}
+
+.CARD-DIV:hover{
+    cursor: pointer;
+    transition: .03s all ease-in-out;
+}
+.Service-card-div{
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+.Service-card-div:hover {
+    border: 3px solid #2985c3;
+    transition: 0.3s all ease-in-out;
+}

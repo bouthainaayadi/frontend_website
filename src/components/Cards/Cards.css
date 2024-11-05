@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* Base styles */
+.card__img {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 250px;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  width: fit-content;
+  height: 300px;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+}
+
+.card__data {
+  width: 400px;
+  overflow-y: auto;
+  background-color: hsl(230, 100%, 97%);
+  padding: 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  transition: opacity .2s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .card__article {
+    flex-direction: column; /* Stack the image on top and details below */
+    align-items: center; /* Center the content */
+    height: max-content;
+  }
+
+  .card__img {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain aspect ratio */
+  }
+
+  .card__data {
+    width: 100%; /* Make the data section full width */
+    max-height: 200px; /* Remove max-height to allow content to grow */
+  }
+}
